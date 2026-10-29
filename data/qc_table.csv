@@ -1,0 +1,9 @@
+recording,label,role,device,duration_s,native_hz,max_gap_s,nans,same_length,monotonic
+walking_train_01,Walking,train,iPhone 11,121.5,100.1,0.01,0,True,True
+jumping_train_01,Jumping,train,iPhone 11,60.0,100.1,0.01,0,True,True
+jumping_train_02,Jumping,train,iPhone 11,49.6,100.1,0.01,0,True,True
+standing_train_01,Standing,train,iPhone 11,122.1,100.1,0.01,0,True,True
+still_train_01,Still,train,iPhone 11,122.1,100.1,0.01,0,True,True
+jumping_test_01,Jumping,test,iPhone 11 Pro,25.9,99.8,0.01,0,True,True
+still_test_01,Still,test,iPhone 11 Pro,122.3,99.8,0.01,0,True,True
+multi_test_01,Multi,multi,iPhone 11,41.0,100.1,0.01,0,True,True
