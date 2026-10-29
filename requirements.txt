@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+# to run the notebook / rebuild the report:
+jupyter
+nbconvert
+ipykernel
+reportlab
+pillow
