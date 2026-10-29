@@ -1,0 +1,12 @@
+model,test set,overall accuracy
+Viterbi + Baum-Welch (main),2 unseen files,0.9624
+Viterbi + Baum-Welch (main),2 unseen + multi-activity,0.9202
+Viterbi + Baum-Welch (main),multi-activity only,0.7333
+"Viterbi, supervised init only",2 unseen files,0.9624
+"Viterbi, supervised init only",2 unseen + multi-activity,0.9202
+"Viterbi, supervised init only",multi-activity only,0.7333
+Frame-wise Gaussian (no transitions),2 unseen files,0.9624
+Frame-wise Gaussian (no transitions),2 unseen + multi-activity,0.9264
+Frame-wise Gaussian (no transitions),multi-activity only,0.7667
+Unsupervised Baum-Welch (random init),2 unseen files,0.9624
+Unsupervised Baum-Welch (random init),2 unseen + multi-activity,0.9202
