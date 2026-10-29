@@ -1,0 +1,407 @@
+{
+ "qc": [
+  {
+   "recording": "walking_train_01",
+   "label": "Walking",
+   "role": "train",
+   "device": "iPhone 11",
+   "duration_s": 121.5,
+   "native_hz": 100.1,
+   "max_gap_s": 0.01,
+   "nans": 0,
+   "same_length": true,
+   "monotonic": true
+  },
+  {
+   "recording": "jumping_train_01",
+   "label": "Jumping",
+   "role": "train",
+   "device": "iPhone 11",
+   "duration_s": 60.0,
+   "native_hz": 100.1,
+   "max_gap_s": 0.01,
+   "nans": 0,
+   "same_length": true,
+   "monotonic": true
+  },
+  {
+   "recording": "jumping_train_02",
+   "label": "Jumping",
+   "role": "train",
+   "device": "iPhone 11",
+   "duration_s": 49.6,
+   "native_hz": 100.1,
+   "max_gap_s": 0.01,
+   "nans": 0,
+   "same_length": true,
+   "monotonic": true
+  },
+  {
+   "recording": "standing_train_01",
+   "label": "Standing",
+   "role": "train",
+   "device": "iPhone 11",
+   "duration_s": 122.1,
+   "native_hz": 100.1,
+   "max_gap_s": 0.01,
+   "nans": 0,
+   "same_length": true,
+   "monotonic": true
+  },
+  {
+   "recording": "still_train_01",
+   "label": "Still",
+   "role": "train",
+   "device": "iPhone 11",
+   "duration_s": 122.1,
+   "native_hz": 100.1,
+   "max_gap_s": 0.01,
+   "nans": 0,
+   "same_length": true,
+   "monotonic": true
+  },
+  {
+   "recording": "jumping_test_01",
+   "label": "Jumping",
+   "role": "test",
+   "device": "iPhone 11 Pro",
+   "duration_s": 25.9,
+   "native_hz": 99.8,
+   "max_gap_s": 0.01,
+   "nans": 0,
+   "same_length": true,
+   "monotonic": true
+  },
+  {
+   "recording": "still_test_01",
+   "label": "Still",
+   "role": "test",
+   "device": "iPhone 11 Pro",
+   "duration_s": 122.3,
+   "native_hz": 99.8,
+   "max_gap_s": 0.01,
+   "nans": 0,
+   "same_length": true,
+   "monotonic": true
+  },
+  {
+   "recording": "multi_test_01",
+   "label": "Multi",
+   "role": "multi",
+   "device": "iPhone 11",
+   "duration_s": 41.0,
+   "native_hz": 100.1,
+   "max_gap_s": 0.01,
+   "nans": 0,
+   "same_length": true,
+   "monotonic": true
+  }
+ ],
+ "leak_overlap_s": 25.9,
+ "leak_cut_s": 27.4,
+ "window_counts": {
+  "test_multi": {
+   "Jumping": 11,
+   "Standing": 8,
+   "Still": 5,
+   "Walking": 6,
+   "transition": 4
+  },
+  "test_unseen": {
+   "Jumping": 18,
+   "Standing": 0,
+   "Still": 115,
+   "Walking": 0,
+   "transition": 0
+  },
+  "train": {
+   "Jumping": 62,
+   "Standing": 104,
+   "Still": 104,
+   "Walking": 103,
+   "transition": 0
+  }
+ },
+ "median_feats": {
+  "Still": {
+   "acc_var": 0.0002,
+   "acc_domfreq": 1.5,
+   "acc_entropy": 0.8024,
+   "gyr_sma": 0.0022
+  },
+  "Standing": {
+   "acc_var": 0.0091,
+   "acc_domfreq": 2.5,
+   "acc_entropy": 0.7967,
+   "gyr_sma": 0.059
+  },
+  "Walking": {
+   "acc_var": 5.0708,
+   "acc_domfreq": 1.5,
+   "acc_entropy": 0.569,
+   "gyr_sma": 1.8806
+  },
+  "Jumping": {
+   "acc_var": 255.211,
+   "acc_domfreq": 4.0,
+   "acc_entropy": 0.5698,
+   "gyr_sma": 4.8597
+  }
+ },
+ "n_seq": 40,
+ "seq_windows": 2780,
+ "bw_iters": 2,
+ "ll_first": 4840.054974658211,
+ "ll_last": 4840.0549746689285,
+ "ll_change": 1.0717485565692186e-08,
+ "A": [
+  [
+   0.897431747228566,
+   0.03686034064243617,
+   0.04006544829854837,
+   0.025642463830449515
+  ],
+  [
+   0.024466211219060972,
+   0.8990785989046775,
+   0.03669855230230957,
+   0.03975663757395211
+  ],
+  [
+   0.020959455332602378,
+   0.03293543152436238,
+   0.8937087203070636,
+   0.052396392835971625
+  ],
+  [
+   0.041562762907996605,
+   0.03022780741658689,
+   0.027708928418496353,
+   0.9005005012569202
+  ]
+ ],
+ "A_init": [
+  [
+   0.8974317472323896,
+   0.03686034063884207,
+   0.04006544829840835,
+   0.025642463830360066
+  ],
+  [
+   0.024466211215833547,
+   0.8990785989076521,
+   0.03669855230243241,
+   0.039756637574082127
+  ],
+  [
+   0.0209594553326028,
+   0.03293543152436214,
+   0.8937087203070642,
+   0.05239639283597105
+  ],
+  [
+   0.041562762907995425,
+   0.030227807416587323,
+   0.027708928418496634,
+   0.9005005012569206
+  ]
+ ],
+ "pi": [
+  0.2500000000000009,
+  0.19999999999998083,
+  0.20000000000001478,
+  0.3500000000000035
+ ],
+ "chunks": {
+  "Still": 12,
+  "Standing": 12,
+  "Walking": 12,
+  "Jumping": 7
+ },
+ "jump_median_var": {
+  "jumping_test_01": 234.1,
+  "jumping_train_01": 334.2,
+  "jumping_train_02": 196.3,
+  "multi_test_01": 43.9
+ },
+ "jump_median_gyr": {
+  "jumping_test_01": 5.0,
+  "jumping_train_01": 4.86,
+  "jumping_train_02": 4.83,
+  "multi_test_01": 1.62
+ },
+ "unsup_ll": [
+  4840.1,
+  4840.1,
+  4840.1,
+  -8493.4,
+  -8493.4
+ ],
+ "unsup_iters": 5,
+ "unsup_bijective": true,
+ "acc": {
+  "Viterbi + Baum-Welch (main) | 2 unseen files": 0.9624,
+  "Viterbi + Baum-Welch (main) | 2 unseen + multi-activity": 0.9202,
+  "Viterbi + Baum-Welch (main) | multi-activity only": 0.7333,
+  "Viterbi, supervised init only | 2 unseen files": 0.9624,
+  "Viterbi, supervised init only | 2 unseen + multi-activity": 0.9202,
+  "Viterbi, supervised init only | multi-activity only": 0.7333,
+  "Frame-wise Gaussian (no transitions) | 2 unseen files": 0.9624,
+  "Frame-wise Gaussian (no transitions) | 2 unseen + multi-activity": 0.9264,
+  "Frame-wise Gaussian (no transitions) | multi-activity only": 0.7667,
+  "Unsupervised Baum-Welch (random init) | 2 unseen files": 0.9624,
+  "Unsupervised Baum-Welch (random init) | 2 unseen + multi-activity": 0.9202
+ },
+ "per_file": {
+  "2 unseen files": {
+   "jumping_test_01": 1.0,
+   "still_test_01": 0.9565217391304348
+  },
+  "2 unseen + multi-activity": {
+   "jumping_test_01": 1.0,
+   "still_test_01": 0.9565217391304348,
+   "multi_test_01": 0.7333333333333333
+  },
+  "multi-activity only": {
+   "multi_test_01": 0.7333333333333333
+  }
+ },
+ "table_unseen2": [
+  {
+   "Activity": "Still",
+   "Samples": 115,
+   "Sensitivity": 0.9565,
+   "Specificity": 1.0,
+   "Accuracy (one-vs-rest)": 0.9624
+  },
+  {
+   "Activity": "Standing",
+   "Samples": 0,
+   "Sensitivity": NaN,
+   "Specificity": 0.9624,
+   "Accuracy (one-vs-rest)": 0.9624
+  },
+  {
+   "Activity": "Walking",
+   "Samples": 0,
+   "Sensitivity": NaN,
+   "Specificity": 1.0,
+   "Accuracy (one-vs-rest)": 1.0
+  },
+  {
+   "Activity": "Jumping",
+   "Samples": 18,
+   "Sensitivity": 1.0,
+   "Specificity": 1.0,
+   "Accuracy (one-vs-rest)": 1.0
+  }
+ ],
+ "table_heldout": [
+  {
+   "Activity": "Still",
+   "Samples": 120,
+   "Sensitivity": 0.9583,
+   "Specificity": 1.0,
+   "Accuracy (one-vs-rest)": 0.9693
+  },
+  {
+   "Activity": "Standing",
+   "Samples": 8,
+   "Sensitivity": 1.0,
+   "Specificity": 0.9677,
+   "Accuracy (one-vs-rest)": 0.9693
+  },
+  {
+   "Activity": "Walking",
+   "Samples": 6,
+   "Sensitivity": 1.0,
+   "Specificity": 0.949,
+   "Accuracy (one-vs-rest)": 0.9509
+  },
+  {
+   "Activity": "Jumping",
+   "Samples": 29,
+   "Sensitivity": 0.7241,
+   "Specificity": 1.0,
+   "Accuracy (one-vs-rest)": 0.9509
+  }
+ ],
+ "cm_unseen2": [
+  [
+   110,
+   5,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   18
+  ]
+ ],
+ "cm_heldout": [
+  [
+   115,
+   5,
+   0,
+   0
+  ],
+  [
+   0,
+   8,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   6,
+   0
+  ],
+  [
+   0,
+   0,
+   8,
+   21
+  ]
+ ],
+ "cm_multi": [
+  [
+   5,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   8,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   6,
+   0
+  ],
+  [
+   0,
+   0,
+   8,
+   3
+  ]
+ ]
+}
