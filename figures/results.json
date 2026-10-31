@@ -99,6 +99,7 @@
  ],
  "leak_overlap_s": 25.9,
  "leak_cut_s": 27.4,
+ "n_chunk_files": 61,
  "window_counts": {
   "test_multi": {
    "Jumping": 11,
