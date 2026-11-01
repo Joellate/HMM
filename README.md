@@ -1,18 +1,17 @@
 # HMM activity recognition
 
-A Hidden Markov Model written from scratch in numpy (forward, backward, Viterbi, Baum-Welch). It decodes four activities, **Still, Standing, Walking and Jumping**, from phone accelerometer and gyroscope data that I recorded with Sensor Logger. No HMM library is used. The code needs numpy, pandas, scipy, matplotlib and seaborn.
+A simple, from-scratch Hidden Markov Model (HMM) in numpy (implements the forward, backward, Viterbi, Baum-Welch algorithm). It is based on four activities I recorded using the application Sensor Logger: Still, Standing, Walking and Jumping, which I decoded from the data from the accelerometer and gyroscope of my phone. No HMM library is used. You must have numpy, pandas, scipy, matplotlib and seaborn.
+Author: Your Name | Course: Your Course Name
 
-Author: [your name] | Course: [course name]
+The results on unseen data (Viterbi)
 
-## Results on unseen data (Viterbi)
-
-| Test set | Windows scored | Overall accuracy |
+Test set | Windows scored | Overall accuracy |
 |---|---|---|
 | 2 required unseen files (`jumping_test_01`, `still_test_01`, iPhone 11 Pro) | 133 | 0.962 |
 | 2 unseen files + multi-activity clip | 163 | 0.920 |
 | multi-activity clip alone | 30 | 0.733 |
 
-The two unseen files only contain Still and Jumping, so Walking and Standing are scored on the multi-activity clip (6 and 8 windows). The jumps in that clip are much gentler than in training and are mostly decoded as Walking. The report has the details and limits.
+Walking and Standing are only scored on the multi-activity clip (6 and 8 windows) because there is no file of these activities.The Walking and Standing files do not exist, so they are only scored on the multi-activity clip. This clip shows a lot of jumps which are not as sharp as in training, and are primarily interpreted as Walking. The report spells out the details and limits.
 
 ## How to run
 
@@ -24,7 +23,7 @@ cd ../report
 python build_report.py
 ```
 
-The notebook reads `data/raw/` and `data/recordings_manifest.csv`, then writes `data/processed/`, `data/chunks/`, the feature files, `figures/` and `figures/results.json`. Random seed is 42. The report script rebuilds `report/report.pdf` from those outputs.
+It reads the two files `data/raw/`, `data/recordings_manifest.csv`, and writes the following files: `data/processed/`, `data/chunks/`, the feature files, and `figures/` and `figures/results.json. Random seed is 42. These outputs are used to rebuild the report pdf in the report script.
 
 ## Folder layout
 
@@ -45,12 +44,15 @@ report/                report.pdf and build_report.py
 
 ## Data notes
 
-* Recordings: walking, jumping (two clips), standing at waist level, still on a flat surface (gravity channel on), two unseen test clips (jumping and still) from a different phone, and one clip with all four activities.
-* All signals are resampled to 50 Hz, trimmed by 3 s at each end and split into 10 s chunks. Windows are 2 s with 50% overlap and stay inside a chunk.
-* `jumping_test_01` was recorded at the same time as `jumping_train_01`, so I removed the overlapping part of the training clip.
+Recordings: Walking, jumping (2 clips), standing at waist level, still (gravity channel on), 2 unseen test clips (still, jumping) from different phone, 1 clip of all 4 activities.
+* All signals are resampled to 50 Hz, trimmed by 3 s at each end and split into 10 s chunks. Windows are 2 s with 50% overlap and remain within a chunk.
+`jumping_test_01` was taken at the same time as `jumping_train_01`, so I cut the training clip down to exclude the common area.
 * Segments of the multi-activity clip: Still 0-10 s, pick-up 10-12 s, Standing 12-21 s, Jumping 21-31.5 s, Walking from 31.5 s.
-* No training clip contains more than one activity, so the training sequences are random concatenations of 10 s chunks. The off-diagonal transition probabilities come from that choice and not from real behaviour.
+There is only one activity in each training clip, and the training sequences are random concatenations of 10 s clips. The off-diagonal transition probabilities do not reflect actual behaviour, but rather are a consequence of that choice.
 
 ## Videos
 
-[Standing: link] [Walking: link] [Jumping: link] [Still: link]
+Standing:https://drive.google.com/file/d/14bXi_YKq8MsvZhjWOkLVvNvk-Px5cNnc/view?usp=sharing
+Walking:https://drive.google.com/file/d/1DNB2eZrVowvWcW2GhMEnhiuI1NYyTArG/view?usp=sharing
+Jumping:https://drive.google.com/file/d/1MJbGbg7KquVw6Vf7bx5yNw0bP62Fzic2/view?usp=sharing
+Still:https://drive.google.com/file/d/1AxzBbmKk0YBzZTilwP2R7I1w8gaNq4o2/view?usp=sharing 
