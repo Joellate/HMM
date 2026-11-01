@@ -1,7 +1,7 @@
 # HMM activity recognition
 
 A simple, from-scratch Hidden Markov Model (HMM) in numpy (implements the forward, backward, Viterbi, Baum-Welch algorithm). It is based on four activities I recorded using the application Sensor Logger: Still, Standing, Walking and Jumping, which I decoded from the data from the accelerometer and gyroscope of my phone. No HMM library is used. You must have numpy, pandas, scipy, matplotlib and seaborn.
-Author: Your Name | Course: Your Course Name
+Author: Teta Joella ML 2
 
 The results on unseen data (Viterbi)
 
